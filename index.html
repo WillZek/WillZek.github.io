@@ -1,2 +1,212 @@
-~ $ cd WillZek.github.io
-~ $ echo "WillZek OFC" > index.html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CrowBot-ST: Tu Asistente Virtual de WhatsApp</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background: #4CAF50;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            overflow: hidden;
+            padding: 20px;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin: 10px 5px;
+            transition: background 0.3s ease;
+        }
+        .btn-primary {
+            background: #4CAF50;
+            color: #fff;
+        }
+        .btn-primary:hover {
+            background: #45a049;
+        }
+        .btn-secondary {
+            background: #008CBA;
+            color: #fff;
+        }
+        .btn-secondary:hover {
+            background: #007BB5;
+        }
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .feature {
+            background: #fff;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            flex: 1 1 calc(33.333% - 20px);
+            box-sizing: border-box;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        /* Chatbot Styles */
+        .chatbot {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 300px;
+            height: 400px;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            display: none;
+            flex-direction: column;
+        }
+        .chatbot-header {
+            background: #4CAF50;
+            color: #fff;
+            padding: 10px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            text-align: center;
+            font-weight: bold;
+            position: relative;
+        }
+        .chatbot-close {
+            position: absolute;
+            top: 5px;
+            right: 10px;
+            background: transparent;
+            border: none;
+            color: #fff;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        .chatbot-messages {
+            flex: 1;
+            padding: 10px;
+            overflow-y: auto;
+        }
+        .chatbot-input {
+            display: flex;
+            border-top: 1px solid #ddd;
+        }
+        .chatbot-input input {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            border-bottom-left-radius: 10px;
+        }
+        .chatbot-input button {
+            padding: 10px;
+            background: #4CAF50;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+            border-bottom-right-radius: 10px;
+        }
+        .chatbot-toggle {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>CrowBot-ST: Tu Asistente Virtual de WhatsApp</h1>
+</header>
+
+<div class="container">
+    <section>
+        <h2>¿Qué es CrowBot-ST?</h2>
+        <p>CrowBot-ST es un bot de WhatsApp que actúa como un asistente virtual multifuncional. Inspirado En Brawl Stars, CrowBot-ST no solo realiza las tareas habituales, sino que va más allá al ofrecer una experiencia interactiva y personalizada. Desde descargar música y videos hasta crear stickers y mejorar la calidad de las imágenes, CrowBot-ST está diseñado para ser tu compañero digital perfecto.</p>
+    </section>
+
+    <section>
+        <h2>Funcionalidades de CrowBot-ST</h2>
+        <div class="features">
+            <div class="feature">
+                <h3>Descarga de Música y Videos</h3>
+                <p>Olvídate de buscar enlaces y descargar manualmente. Con CrowBot-ST, puedes descargar tus canciones y videos favoritos directamente desde WhatsApp con solo un comando.</p>
+            </div>
+            <div class="feature">
+                <h3>Creación de Stickers</h3>
+                <p>Convierte cualquier imagen en un divertido sticker con solo unos toques. CrowBot-ST hace que la creación de stickers sea rápida y sencilla, permitiéndote expresar tus emociones de manera creativa.</p>
+            </div>
+            <div class="feature">
+                <h3>Conversación con IA</h3>
+                <p>CrowBot-ST puede mantener conversaciones inteligentes gracias a su integración con IA avanzada. Ya sea que necesites respuestas rápidas o quieras charlar sobre diversos temas, Yugi-Bot está siempre disponible.</p>
+            </div>
+            <div class="feature">
+                <h3>Mejora de Imágenes</h3>
+                <p>Transforma tus fotos con la función de mejora de calidad de imagen de CrowBot-ST. Obtén imágenes más nítidas y de mayor resolución en segundos.</p>
+            </div>
+            <div class="feature">
+                <h3>Gestión de Grupos</h3>
+                <p>CrowBot-ST no solo actúa como un asistente personal, sino que también puede gestionar grupos de WhatsApp. Cambia la URL del grupo, modifica el nombre y realiza otras acciones administrativas con facilidad.</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Cómo Empezar con CrowBot-ST</h2>
+        <p>Para empezar a usar CrowBot-ST, solo necesitas agregarlo a tu lista de contactos de WhatsApp y seguir unos simples pasos de configuración. Una vez configurado, puedes empezar a disfrutar de todas sus funcionalidades con comandos fáciles de recordar.</p>
+    </section>
+
+    <section>
+        <h2>Ventajas de Usar CrowBot-ST</h2>
+        <ul>
+            <li><strong>Eficiencia:</strong> Automatiza tareas repetitivas y ahorra tiempo.</li>
+            <li><strong>Personalización:</strong> Adapta las funciones del bot a tus necesidades específicas.</li>
+            <li><strong>Interactividad:</strong> Mantén conversaciones inteligentes y entretenidas con la IA integrada.</li>
+            <li><strong>Conveniencia:</strong> Realiza acciones directamente desde WhatsApp sin necesidad de aplicaciones adicionales.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Información Adicional</h2>
+        <p><strong>Creador:</strong> WillZek</p>
+        <p><strong>Grupo Oficial:</strong> <a href="https://chat.whatsapp.com/C4LPn0cWKrx8Y7UgGZkneI" class="btn btn-primary">Unirse al Grupo</a></p>
+        <p>Para más información sobre CrowBot-ST, envía un mensaje a <a href="https://wa.me/50557865603?text=Hola%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20CrowBot" class="btn btn-secondary">hablar con willzek</a>.</p>
+    </section>
+
+    <section>
+        <h2>Conclusión</h2>
+        <p>CrowBot-ST es más que un simple bot de WhatsApp; es un verdadero asistente virtual que puede transformar la forma en que usas esta plataforma de mensajería. Ya sea para descargar contenido, mejorar tus fotos o gestionar grupos, CrowBot
